@@ -25,13 +25,13 @@ def mark():
         print("TO-DO LIST:\n(I stands for Incomplete)")
         for item in tasks:
             print(item)
-        completed_task = input("Type out the entire line of the task you want to mark complete, including the 'I' or 'It's done!' after the task.").upper()
+        completed_task = input("Type out the entire line of the task you want to mark complete, including the 'I' after the task.").upper()
         tasks.remove(completed_task)
         tasks.append(f"{completed_task}t's done!")
         print(f"{completed_task} has been marked complete.")
 
     except ValueError:
-        print("Please type out the entire line of the task you want to mark complete, including the 'I' or 'It's done!' after the task.")
+        print("Please type out the entire line of the task you want to mark complete, including the 'I' after the task.")
 
 
 
@@ -44,13 +44,13 @@ def delete():
             print("\nTO-DO LIST:\n(I stands for incomplete)")
             for item in tasks:
                 print(item)
-            deleted_task = input("Type out the entire name of the task you would like to delete, including the I after the task.").upper()
+            deleted_task = input("Type out the entire name of the task you would like to delete, including the 'I' or 'It's done'after the task.").upper()
             tasks.remove(deleted_task)
             print(f"{deleted_task} has been deleted.")
             
 
     except ValueError:
-        print("Make sure you type the number of the task you would like to delete.")
+        print("Make sure you type the entire name of the task you would like to delete, including the 'I' or 'It's done' after the task.")
 
 
 
