@@ -25,7 +25,7 @@ def mark():
         print("TO-DO LIST:\n(I stands for Incomplete)")
         for item in tasks:
             print(item)
-        completed_task = input("Type out the entire name of the task you want to mark complete, including the I after the task.").upper()
+        completed_task = input("Type out the entire name of the task you want to mark complete, including the 'I' or 'It's done' after the task.").upper()
         tasks.remove(completed_task)
         tasks.append(f"{completed_task}t's done!")
         print(f"{completed_task} has been marked complete.")
